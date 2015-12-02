@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item >
+        <!--shape:oval 椭圆     rectangle:方形    line：线性-->
+        <shape xmlns:android="http://schemas.android.com/apk/res/android"
+            android:shape="rectangle">
+               <!--填充色  -->
+            <solid 
+                android:color="#EEEE00" />  
+<!--             <solid 
+                android:color="#FCFCFC" />   -->
+        
+        </shape>
+    </item>
+
+</selector>
