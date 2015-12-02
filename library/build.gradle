@@ -9,14 +9,14 @@ ext {
 
     libraryDescription = 'A library follows android material design'
 
-    siteUrl = 'https://github.com/nuuneoi/FBLikeAndroid'
-    gitUrl = 'https://github.com/nuuneoi/FBLikeAndroid.git'
+    siteUrl = 'https://github.com/CodingForAndroid/RippleEffect'
+    gitUrl = 'https://github.com/CodingForAndroid/RippleEffect.git'
 
-    libraryVersion = '0.9.3'
+    libraryVersion = '1.0.0'
 
-    developerId = 'nuuneoi'
-    developerName = 'Sittiphol Phanvilai'
-    developerEmail = 'sittiphol@gmail.com'
+    developerId = 'codingforandroid'
+    developerName = 'jorge'
+    developerEmail = '1078572566@qq.com'
 
     licenseName = 'The Apache Software License, Version 2.0'
     licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
