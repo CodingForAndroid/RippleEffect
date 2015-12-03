@@ -2,9 +2,17 @@
 RippleEffect Follow Material Design
   ![image](https://github.com/CodingForAndroid/RippleEffect/blob/master/screenshot/ripple%20effect.gif)
  
+ 
+ instruction:
+ ①：要实现水波纹效果，首先这个View 必须是可点击的，也就是说clickable ：true 才可以触发 比如默认 Button 的Clickable =true，TextView, ImageView =false，但是可以手动设置 true。
+②：这个是一个布局、可以包裹 需要实现水波纹效果的 view，任何View 只要是可点击的，都可以包裹进来。
+③：可以保证，当手指按下在当前View 上，如果手滑动出了当前View，不会触发该 点击事件， 也就是只有手按下，和手抬起，都是同一个View 才触发 点击事件。
+④：这个效果，保证是 水波纹 结束以后，再去响应 View的点击事件 。
+⑤：一个布局 包裹这么多View，怎么区分每一个的点击事件呢？ 答： 根据 每个View 的id 去响应不同的 事件。
+
 Usage
 include this library, use
-
+可以将下面的 拷贝到layout xml布局中
     <com.jorge.ripple_effect.RippleLayout
         android:id="@+id/ripplelayout"
         android:orientation="vertical"
@@ -65,8 +73,8 @@ include this library, use
    
     
     Download  for  android studio
-    
-    Gradle: 
+  
+   用Gradle 去加载：
     
 dependencies {
     compile 'RippleEffect:library:1.0.0'
