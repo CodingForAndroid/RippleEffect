@@ -4,6 +4,7 @@ RippleEffect Follow Material Design
  
  
  instruction:
+ 
  ①：要实现水波纹效果，首先这个View 必须是可点击的，也就是说clickable ：true 才可以触发 比如默认 Button 的Clickable =true，TextView, ImageView =false，但是可以手动设置 true。
  
 ②：这个是一个布局、可以包裹 需要实现水波纹效果的 view，任何View 只要是可点击的，都可以包裹进来。
