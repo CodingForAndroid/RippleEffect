@@ -84,3 +84,27 @@ include this library, use
 dependencies {
     compile 'RippleEffect:library:1.0.0'
  }
+
+
+在具体Activity 中 根据子view id响应 对应的 click 事件
+ 
+ //  eg :
+ 
+ 
+       RippleLayout findViewById = (RippleLayout) findViewById(R.id.ripplelayout);
+        findViewById.setOnRippleCompleteListener(new RippleLayout.OnRippleCompleteListener() {
+
+            @Override
+            public void onComplete(int id) {
+                if(id==R.id.button01){
+                    startActivity(new Intent(MainActivity.this, NewActivity.class));
+                }else if(id==R.id.button02){
+                    Toast.makeText(getApplicationContext(), "Button02", Toast.LENGTH_SHORT).show();
+                }else if(id==R.id.button04){
+                    Toast.makeText(getApplicationContext(), "ImageButton", Toast.LENGTH_SHORT).show();
+                }
+
+            }
+
+
+        });
