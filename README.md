@@ -2,6 +2,10 @@
 RippleEffect Follow Material Design
   ![image](https://github.com/CodingForAndroid/RippleEffect/blob/master/screenshot/ripple%20effect.gif)
  
+ 使用说明：
+ 使用简单，只需要包裹布局，在相关界面中设置完成监听即可！
+ 在layout布局中 当做 LinearLayout 使用RippleLayout ，给其包裹的子View 设置 id，在相关Activity 或者Fragment 中 给RippleLayout       设置监听事件 setOnRippleCompleteListener()  在方法内部 根据 子view id 去响应相关的 点击事件，最下面举例说明。
+ 
  
  instruction:
  
@@ -18,20 +22,21 @@ RippleEffect Follow Material Design
 Usage
 include this library, use
 可以将下面的 拷贝到layout xml布局中
+
+       
+            
     <com.jorge.ripple_effect.RippleLayout
         android:id="@+id/ripplelayout"
         android:orientation="vertical"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" >
-
-        <Button
+         <Button
             android:layout_marginTop="30dp"
             android:id="@+id/button01"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:background="@drawable/shape_rectangle_regist_button_selector"
             android:text="Activity跳转"
-
             android:enabled="true"/>
         <Button
             android:layout_marginTop="50dp"
@@ -40,7 +45,6 @@ include this library, use
             android:layout_height="fill_parent"
             android:background="@drawable/shape_rectangle_regist_button_selector"
             android:text="吐司"
-
             android:enabled="true"/>
         <Button
             android:layout_gravity="center_horizontal"
@@ -67,7 +71,7 @@ include this library, use
             android:layout_height="60dp"
             android:layout_width="fill_parent"
             android:layout_margin="10dp"/>
-    </com.jorge.ripple_effect.RippleLayout>
+     </com.jorge.ripple_effect.RippleLayout>
     
     
     
@@ -80,21 +84,20 @@ include this library, use
     Download  for  android studio
   
    用Gradle 去加载：
-    
+  
 dependencies {
-    compile 'RippleEffect:library:1.0.0'
+     compile 'RippleEffect:library:1.0.0'
  }
 
 
 在具体Activity 中 根据子view id响应 对应的 click 事件
  
  //  eg :
- 
- 
-       RippleLayout findViewById = (RippleLayout) findViewById(R.id.ripplelayout);
-        findViewById.setOnRippleCompleteListener(new RippleLayout.OnRippleCompleteListener() {
 
-            @Override
+            
+        RippleLayout findViewById = (RippleLayout) findViewById(R.id.ripplelayout);
+        findViewById.setOnRippleCompleteListener(new RippleLayout.OnRippleCompleteListener() {
+             @Override
             public void onComplete(int id) {
                 if(id==R.id.button01){
                     startActivity(new Intent(MainActivity.this, NewActivity.class));
@@ -103,7 +106,6 @@ dependencies {
                 }else if(id==R.id.button04){
                     Toast.makeText(getApplicationContext(), "ImageButton", Toast.LENGTH_SHORT).show();
                 }
-
             }
 
 
