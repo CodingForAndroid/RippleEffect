@@ -7,7 +7,7 @@ RippleEffect Follow Material Design
  在layout布局中 当做 LinearLayout 使用RippleLayout ，给其包裹的子View 设置 id，在相关Activity 或者Fragment 中 给RippleLayout       设置监听事件 setOnRippleCompleteListener()  在方法内部 根据 子view id 去响应相关的 点击事件，最下面举例说明。
  
  
- instruction:
+具备的功能：
  
  ①：要实现水波纹效果，首先这个View 必须是可点击的，也就是说clickable ：true 才可以触发 比如默认 Button 的Clickable =true，TextView, ImageView =false，但是可以手动设置 true。
  
@@ -76,12 +76,7 @@ include this library, use
     
     
     
-    
-    
-    
-   
-    
-    Download  for  android studio
+    used in  android studio
   
    用Gradle 去加载：
   
